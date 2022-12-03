@@ -65,10 +65,9 @@ public class BaseConverter extends JPanel {
         //chooser.setFileFilter(filter);
         //FileNameExtensionFilter filter = new FileNameExtensionFilter("dat");
         //chooser.setFileFilter(filter);
-        final JFrame frame = new JFrame("");
         FileNameExtensionFilter filter = new FileNameExtensionFilter("DAT", "dat", "Delevered at Terminal");
         chooser.setFileFilter(filter);
-        int returnVal = chooser.showOpenDialog(frame);
+        int returnVal = chooser.showOpenDialog(null);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             return chooser.getSelectedFile().getName();
         }
